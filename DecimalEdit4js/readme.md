@@ -2,11 +2,10 @@
 元数据
 ```json
 {
-	"metadata":{
-		"name" : "amt1", //指定组件的名字
-		"caption" : "订单金额", //指定组件在需要展示标签时的名称
-		"defaultValue" : null//默认值
-	}
+	"componentType": "DecimalEdit",
+	"name" : "amt1", //指定组件的名字
+	"caption" : "订单金额", //指定组件在需要展示标签时的名称
+	"defaultValue" : null//默认值
 }
 ```
 提交数据

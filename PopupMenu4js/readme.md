@@ -1,3 +1,6 @@
+弹出菜单
+元数据
+```json
 {
 	"componentType" : "PopupMenu",
 	"items":[
@@ -73,3 +76,4 @@
 		}
 	]
 }
+```

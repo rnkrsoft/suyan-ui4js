@@ -2,11 +2,10 @@
 元数据
 ```json
 {
-	"metadata":{
-		"name" : "age1", //指定组件的名字
-		"caption" : "用户年龄", //指定组件在需要展示标签时的名称
-		"defaultValue" : null//默认值
-	}
+	"componentType": "IntegerEdit",
+	"name": "age1", //指定组件的名字
+	"caption": "用户年龄", //指定组件在需要展示标签时的名称
+	"defaultValue": null //默认值
 }
 ```
 提交数据

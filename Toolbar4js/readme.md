@@ -2,10 +2,10 @@
 元数据
 ```json
 {
+	"componentType" : "ToolBar",
 	"name" : "name1", //指定组件的名字
 	"caption" : "注册用户名", //指定组件在需要展示标签时的名称
 	"autoSize" : true,//工具栏是否自动调整大小容纳
-	
 	"components" : [ //放入对应组件的元信息定义
 		{
 			"componentType" : "Button",

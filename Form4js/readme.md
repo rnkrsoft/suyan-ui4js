@@ -2,9 +2,11 @@
 元数据
 ```json
 {
+	"componentType": "Form",
 	"name": "createUserDialogbox", //指定组件的名字
 	"caption": "创建新用户", //指定组件在需要展示标签时的名称
 	"icon": "", //窗体显示的图标
+	"modal": false, //是否是模态窗口
 	"menu": { //指定一个MainMenu组件
 		"componentType": "MainMenu",
 		"items": [{
@@ -13,37 +15,45 @@
 			"icon": "suyan4j-icon-execute", //按钮图标，如果为null或空字符串不显示
 			"caption": "操作1", //指定组件在需要展示标签时的名称
 			"color": "rgb(123,123,123)", //支持red，#888, rgb()
-			"onclick": { //单击事件
-				"service": "com.rnkrsoft.demo.DemoService.hello1"
-				"params": [
-					"name1",
-					"age1"
+			"event" : {
+				"onclick": [
+					{ //单击事件
+						"service": "com.rnkrsoft.demo.DemoService.hello1"
+						"params": [
+							"name1",
+							"age1"
+						],
+						"target": {
+							"type": "Component", //Component, URL, Redirect, Nil
+							"component": "name1" //Component 通过全局的组件名称选中目标结果组件
+						}
+					}
 				],
-				"target": {
-					"type": "Component", //Component, URL, Redirect, Nil
-					"component": "name1" //Component 通过全局的组件名称选中目标结果组件
-				}
-			},
-			"onmouseover": { //鼠标移入事件
-				"service": "com.rnkrsoft.demo.DemoService.hello2"
-				"params": [
-					"name1",
-					"age1"
+				"onmouseover": [
+					{ //鼠标移入事件
+						"service": "com.rnkrsoft.demo.DemoService.hello2"
+						"params": [
+							"name1",
+							"age1"
+						],
+						"target": {
+							"type": "URL", //Component, URL, Redirect, Nil
+						}
+					}
 				],
-				"target": {
-					"type": "URL", //Component, URL, Redirect, Nil
-				}
-			},
-			"onmouseout": { //鼠标移出事件
-				"service": "com.rnkrsoft.demo.DemoService.hello3"
-				"params": [
-					"name1",
-					"age1"
+				"onmouseout": [
+					{ //鼠标移出事件
+						"service": "com.rnkrsoft.demo.DemoService.hello3"
+						"params": [
+							"name1",
+							"age1"
+						],
+						"target": {
+							"type": "Redirect", //Component, URL, Redirect, Nil
+						}
+					}
 				],
-				"target": {
-					"type": "Redirect", //Component, URL, Redirect, Nil
-				}
-			},
+			}
 		}, {
 			"componentType": "Separator",
 			"name": "separator2", //指定组件的名字
@@ -81,9 +91,45 @@
 					"icon": "suyan4j-icon-execute", //按钮图标，如果为null或空字符串不显示
 					"caption": "操作31", //指定组件在需要展示标签时的名称
 					"color": "rgb(123,123,123)", //支持red，#888, rgb()
-					"onclick": null, //单击事件
-					"onmouseover":null, //鼠标移入事件
-					"onmouseout":null, //鼠标移出事件
+					"event" : {
+						"onclick": [
+							{ //单击事件
+								"service": "com.rnkrsoft.demo.DemoService.hello1"
+								"params": [
+									"name1",
+									"age1"
+								],
+								"target": {
+									"type": "Component", //Component, URL, Redirect, Nil
+									"component": "name1" //Component 通过全局的组件名称选中目标结果组件
+								}
+							}
+						],
+						"onmouseover": [
+							{ //鼠标移入事件
+								"service": "com.rnkrsoft.demo.DemoService.hello2"
+								"params": [
+									"name1",
+									"age1"
+								],
+								"target": {
+									"type": "URL", //Component, URL, Redirect, Nil
+								}
+							}
+						],
+						"onmouseout": [
+							{ //鼠标移出事件
+								"service": "com.rnkrsoft.demo.DemoService.hello3"
+								"params": [
+									"name1",
+									"age1"
+								],
+								"target": {
+									"type": "Redirect", //Component, URL, Redirect, Nil
+								}
+							}
+						],
+					}
 				}, {
 					"componentType": "Separator",
 					"name": "separator332", //指定组件的名字
